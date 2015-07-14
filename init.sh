@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
 # initialize submodules
-git submodule init
+git submodule update --init --recursive 
 
 # symlink
-ln -s ".vimrc" "$HOME"
-ln -s ".zshrc" "$HOME"
+ln -s ".dotfiles/.vimrc" "$HOME/.vimrc"
+ln -s ".dotfiles/.zshrc" "$HOME/.zshrc"
