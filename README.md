@@ -10,5 +10,5 @@ Collection of my dotfiles. This repository is intended as a backup, but feel fre
 ## Usage
 
 1. checkout
-2. cd .dotfiles
-3. ./init.sh
+2. `cd .dotfiles`
+3. `./init.sh`
