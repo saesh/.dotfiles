@@ -11,4 +11,4 @@ Collection of my dotfiles. This repository is intended as a backup, but feel fre
 
 1. checkout
 2. `cd .dotfiles`
-3. `./init.sh`
+3. `./bootstrap.sh`
