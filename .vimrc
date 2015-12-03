@@ -38,3 +38,7 @@ set secure
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
