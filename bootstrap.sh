@@ -8,8 +8,11 @@ git pull origin master
 git submodule update --init --recursive 
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude ".gitmodules" --exclude "fonts/" -avh --no-perms . ~;
+	rsync \
+		--exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+		--exclude "README.md" --exclude ".gitmodules" --exclude "fonts/" \
+		--excluse "schemes/" \
+		-avh --no-perms . ~;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
