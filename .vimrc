@@ -1,6 +1,6 @@
 set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+colorscheme spacegray 
+"let g:solarized_termtrans=1
 " Enable syntax highlighting
 syntax on
 
