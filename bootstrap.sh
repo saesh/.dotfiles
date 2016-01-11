@@ -11,7 +11,7 @@ function doIt() {
 	rsync \
 		--exclude ".git" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "brew-install.sh" \
 		--exclude "README.md" --exclude ".gitmodules" --exclude "fonts/" \
-		--exclude "schemes/" \
+		--exclude "schemes/" --exclude "EurKEY-Mac/" \
 		-avh --no-perms . ~;
 }
 
