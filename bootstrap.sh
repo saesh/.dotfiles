@@ -9,7 +9,7 @@ git submodule update --init --recursive
 
 function doIt() {
 	rsync \
-		--exclude ".git" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+		--exclude ".git" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "brew-install.sh" \
 		--exclude "README.md" --exclude ".gitmodules" --exclude "fonts/" \
 		--exclude "schemes/" \
 		-avh --no-perms . ~;
