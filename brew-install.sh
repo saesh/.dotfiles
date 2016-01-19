@@ -17,6 +17,7 @@ brew install caskroom/cask/brew-cask
 brew install ansible
 brew install git
 brew install gradle
+brew install boot2docker
 brew install docker
 brew install docker-machine
 brew install node
@@ -29,3 +30,4 @@ brew cask install firefox
 brew cask install iterm2
 brew cask install flux
 brew cask install macid 
+brew cask install virtualbox
