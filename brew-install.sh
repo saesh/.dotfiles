@@ -17,17 +17,25 @@ brew install caskroom/cask/brew-cask
 brew install ansible
 brew install git
 brew install gradle
-brew install boot2docker
-brew install docker
-brew install docker-machine
+brew install groovysdk
+brew install maven
 brew install node
+brew install pwgen
+brew install pandoc
+brew install sbt
+brew install scala
+brew install typesafe-activator
 
 brew cask install slack
 brew cask install sublime-text3
 brew cask install sourcetree
 brew cask install google-chrome
 brew cask install firefox
+brew cask install dropbox
 brew cask install iterm2
 brew cask install flux
 brew cask install macid 
 brew cask install virtualbox
+brew cask install caffeine
+brew cask install colloquy
+brew cask install the-unarchiver
