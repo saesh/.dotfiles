@@ -12,6 +12,8 @@ common-aliases
 osx
 sublime
 docker
+npm
+bower
 
 EOBUNDLES
 
