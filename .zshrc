@@ -11,7 +11,7 @@ brew
 common-aliases
 osx
 sublime
-vagrant
+docker
 
 EOBUNDLES
 
