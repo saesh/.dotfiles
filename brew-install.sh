@@ -26,6 +26,7 @@ brew install sbt
 brew install scala
 brew install typesafe-activator
 brew install tree
+brew install tmux 
 
 brew cask install slack
 brew cask install sublime-text3
