@@ -44,6 +44,7 @@ brew cask install libreoffice
 brew cask install macid
 brew cask install owncloud
 brew cask install qlmarkdown
+brew cask install qlstephen
 brew cask install slack
 brew cask install sequel-pro
 brew cask install the-unarchiver
