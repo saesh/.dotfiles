@@ -21,6 +21,7 @@ brew install groovysdk
 brew install htop-osx
 brew install irssi
 brew install maven
+brew install mosh
 brew install node
 brew install nvm
 brew install pwgen
