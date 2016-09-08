@@ -24,6 +24,7 @@ brew install maven
 brew install mosh
 brew install node
 brew install nvm
+brew install pass 
 brew install pwgen
 brew install pandoc
 brew install rsync
