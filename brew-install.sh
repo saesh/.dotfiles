@@ -42,6 +42,7 @@ brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
 brew cask install iterm2
+brew cask install itsycal
 brew cask install libreoffice
 brew cask install macid
 brew cask install owncloud
