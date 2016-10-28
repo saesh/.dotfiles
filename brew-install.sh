@@ -37,6 +37,7 @@ brew install tmux
 brew cask install atom
 brew cask install caffeine
 brew cask install calibre
+brew cask install dash 
 brew cask install dropbox
 brew cask install firefox
 brew cask install flux
@@ -46,6 +47,7 @@ brew cask install itsycal
 brew cask install libreoffice
 brew cask install macdown
 brew cask install macid
+brew cask install mactracker 
 brew cask install owncloud
 brew cask install qlmarkdown
 brew cask install qlstephen
