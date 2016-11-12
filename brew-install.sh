@@ -59,3 +59,5 @@ brew cask install the-unarchiver
 brew cask install virtualbox
 brew cask install ynab
 
+brew cask install font-input
+
