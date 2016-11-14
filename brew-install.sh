@@ -40,6 +40,7 @@ brew cask install caffeine
 brew cask install calibre
 brew cask install dash 
 brew cask install dropbox
+brew cask install eurkey 
 brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
