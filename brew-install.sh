@@ -3,6 +3,7 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 sudo -v
 
+brew analytics off
 brew update
 brew upgrade --all
 
