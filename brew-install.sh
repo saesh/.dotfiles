@@ -32,6 +32,7 @@ brew install pandoc
 brew install rsync
 brew install sbt
 brew install scala
+brew install slurm 
 brew install typesafe-activator
 brew install tree
 brew install tmux
