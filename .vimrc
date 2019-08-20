@@ -1,11 +1,9 @@
-"             _                    
+"             _
 "      _   __(_)___ ___  __________
 "     | | / / / __ `__ \/ ___/ ___/
-"    _| |/ / / / / / / / /  / /__  
-"   (_)___/_/_/ /_/ /_/_/   \___/  
-"                               
-
-let mapleader =" "
+"    _| |/ / / / / / / / /  / /__
+"   (_)___/_/_/ /_/ /_/_/   \___/
+"
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -20,11 +18,13 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
 
 " Basic configuration
+    let mapleader =" "
 	set nocompatible
 	filetype plugin on
 	syntax on
@@ -60,7 +60,7 @@ call plug#end()
 
 " Color scheme
 	try
-		colorscheme ron 
+		colorscheme jellybeans
 	catch
 	endtry
 	set background=dark
@@ -77,6 +77,14 @@ call plug#end()
 	map <C-l> <C-w>l
 	map <leader>s :w!<CR>
 
+" Auto Commands
+    autocmd BufWritePre * %s/\s\+$//e
+
 " Plugins
     " Git Gutter
     let g:gitgutter_max_signs = 500  " default value
+
+    " Lightline
+    let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
