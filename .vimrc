@@ -5,6 +5,8 @@
 "   (_)___/_/_/ /_/ /_/_/   \___/
 "
 
+" This .vimrc uses Vim Plug. Install new plugins by :PlugInstall
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -18,10 +20,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'nanotech/jellybeans.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/limelight.vim'
 
 call plug#end()
-
 
 " Basic configuration
     let mapleader =" "
@@ -60,10 +62,15 @@ call plug#end()
 
 " Color scheme
 	try
-		colorscheme jellybeans
+		colorscheme seoul256
 	catch
 	endtry
-	set background=dark
+    "" seoul256 (dark):
+    "   Range:   233 (darkest) ~ 239 (lightest)
+    "   Default: 237
+    let g:seoul256_background = 235
+    let g:seoul256_srgb = 1
+    set background=dark
 
 " Disable autocommenting on newline
 	autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
@@ -79,6 +86,7 @@ call plug#end()
 
 " Auto Commands
     autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufWritePre ~/.zshrc "source ~/.zshrc"
 
 " Plugins
     " Git Gutter
@@ -86,5 +94,33 @@ call plug#end()
 
     " Lightline
     let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'seoul256',
       \ }
+
+function! s:goyo_enter()
+    " quit with Goyo active
+    let b:quitting = 0
+    let b:quitting_bang = 0
+    autocmd QuitPre <buffer> let b:quitting = 1
+    cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+
+    " activate Limelight
+    Limelight
+endfunction
+
+function! s:goyo_leave()
+    " Quit Vim if this is the only remaining buffer
+    if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+      if b:quitting_bang
+        qa!
+      else
+        qa
+      endif
+    endif
+
+    " Deactivate Limelight
+    Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
