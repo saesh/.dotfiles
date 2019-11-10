@@ -97,6 +97,17 @@ call plug#end()
       \ 'colorscheme': 'seoul256',
       \ }
 
+function! s:writing_mode()
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    setlocal spell spelllang=en_us
+    setlocal spell spellfile=$HOME/.vim/spellfile.utf-8.add
+    set formatprg=par
+    setlocal textwidth=100
+    setlocal wrap
+    setlocal linebreak
+endfunction
+
 function! s:goyo_enter()
     " quit with Goyo active
     let b:quitting = 0
@@ -106,6 +117,9 @@ function! s:goyo_enter()
 
     " activate Limelight
     Limelight
+
+    " enable writing mode
+    call s:writing_mode()
 endfunction
 
 function! s:goyo_leave()
