@@ -106,6 +106,8 @@ function! s:writing_mode()
     setlocal textwidth=100
     setlocal wrap
     setlocal linebreak
+    map j gj
+    map k gk
 endfunction
 
 function! s:goyo_enter()
@@ -118,7 +120,6 @@ function! s:goyo_enter()
     " activate Limelight
     Limelight
 
-    " enable writing mode
     call s:writing_mode()
 endfunction
 
