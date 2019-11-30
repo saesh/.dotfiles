@@ -22,6 +22,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'farmergreg/vim-lastplace'
 
 call plug#end()
 
