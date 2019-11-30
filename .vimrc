@@ -125,6 +125,9 @@ function! s:goyo_enter()
     " activate Limelight
     Limelight
 
+    " display mode
+    set showmode
+
     call s:writing_mode()
 endfunction
 
