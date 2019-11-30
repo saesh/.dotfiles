@@ -79,10 +79,6 @@ call plug#end()
 " Shortcuts
 	map <leader>f :Goyo \| set linebreak<CR>
 	" navigation in split view
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
 	map <leader>s :w!<CR>
 
 " Auto Commands
