@@ -63,3 +63,5 @@ bindkey '^[[1;5D' backward-word
 # environment variables
 #
 #export HOMEBREW_GITHUB_API_TOKEN=your_token_here
+
+source .local.zshrc
