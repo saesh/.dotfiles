@@ -47,11 +47,11 @@ zstyle ':completion:*' group-name '' # group results by category
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
 
 # fix del key in urxvt
-bindkey '^[[3~' delete-char
-bindkey '^[3;5~' delete-char
+# bindkey '^[[3~' delete-char
+# bindkey '^[3;5~' delete-char
 
 # ctrl+arrow
-bindkey '^[[1;5D' backward-word
+# bindkey '^[[1;5D' backward-word
 
 #
 # aliases
@@ -66,3 +66,5 @@ bindkey '^[[1;5D' backward-word
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+source .zshrc.local
