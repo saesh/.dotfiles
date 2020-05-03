@@ -67,4 +67,7 @@ zstyle ':completion:::::' completer _expand _complete _ignored _approximate # en
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-source ~/.zshrc.local
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
+
