@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - link:
+    ~/.shell:
     ~/.tmux.conf:
     ~/.zplug: zsh/plugins/zplug
     ~/.zsh:

@@ -18,21 +18,17 @@ source ~/.zsh/settings.zsh
 #
 # aliases
 #
-#alias pw='pwgen 32 -1 | xsel -b -s'
-#alias pwr=' pwgen-passphrase -s - -l 5 -w eff-short | xsel -b -s'
+source ~/.shell/aliases.sh
 
 #
 # environment variables
 #
-#export HOMEBREW_GITHUB_API_TOKEN=your_token_here
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+source ~/.shell/env.sh
 
 #
 # local zsh configuration
 #
 if [ -f ~/.zshrc_local ]; then
-    source ~/.zshrc_local
+    source ~/.zshrc_local_after
 fi
 
