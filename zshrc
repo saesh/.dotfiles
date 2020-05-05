@@ -26,6 +26,11 @@ source ~/.shell/aliases.sh
 source ~/.shell/env.sh
 
 #
+# external resources
+#
+source ~/.shell/external.sh
+
+#
 # local zsh configuration
 #
 if [ -f ~/.zshrc_local ]; then
