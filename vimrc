@@ -10,7 +10,7 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -23,20 +23,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'farmergreg/vim-lastplace'
+Plug 'tpope/vim-sensible'
 
 call plug#end()
 
 " Basic configuration
     let mapleader =" "
-	set nocompatible
-	filetype plugin on
-	syntax on
-	set encoding=utf-8
 	set ffs=unix,dos,mac
 	set number relativenumber
 	set wildmode=longest,list,full
 	set splitbelow splitright
-	set autoread
     set updatetime=100
 	" search
 	set hlsearch
@@ -49,16 +45,13 @@ call plug#end()
 	set noswapfile
 	" tabs / indent
 	set expandtab
-	set smarttab
 	set shiftwidth=4
 	set tabstop=4
 	set lbr
 	set tw=500
-	set ai
 	set si
 	set wrap
     " status line
-	set laststatus=2
     set noshowmode
 
 " Color scheme
