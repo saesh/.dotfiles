@@ -5,3 +5,9 @@
 [submodule "zsh/plugins/zplug"]
 	path = zsh/plugins/zplug
 	url = https://github.com/zplug/zplug
+[submodule "tmux/plugins/tmux-resurrect"]
+	path = tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "tmux/plugins/tmux-continuum"]
+	path = tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum
