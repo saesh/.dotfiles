@@ -1,0 +1,1 @@
+set -x ENHANCD_DISABLE_DOT 1

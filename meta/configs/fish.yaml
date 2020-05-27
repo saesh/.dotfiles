@@ -1,0 +1,9 @@
+- link:
+    "~/.config/fish/functions/bitwarden-clipboard.fish": fish/functions/bitwarden-clipboard.fish
+    "~/.config/fish/config.fish": fish/config.fish
+    "~/.config/fish/functions/fisher.fish": fish/fisher/fisher.fish
+    "~/.config/fish/fishfile": fish/fishfile
+
+- shell:
+    - fisher
+

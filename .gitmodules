@@ -11,3 +11,6 @@
 [submodule "tmux/plugins/tmux-continuum"]
 	path = tmux/plugins/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum
+[submodule "fish/fisher"]
+	path = fish/fisher
+	url = https://github.com/jorgebucaran/fisher.git
