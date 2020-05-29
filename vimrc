@@ -68,6 +68,10 @@ call plug#end()
 	set wrap
     " status line
     set noshowmode
+    " define control characters
+    set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+    " display control characters
+    " set list
 
 " Color scheme
     if filereadable(expand("~/.vimrc_background"))
