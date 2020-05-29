@@ -15,14 +15,29 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'mboughaba/i3config.vim'
+" zen mode
 Plug 'junegunn/goyo.vim'
+
+" multi cursor support
 Plug 'terryma/vim-multiple-cursors'
-Plug 'itchyny/lightline.vim'
+
+" show git changes in sidebar
 Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/seoul256.vim'
+
+" base16 theme support
+Plug 'chriskempson/base16-vim'
+
+" status bar
+Plug 'itchyny/lightline.vim'
+Plug 'daviesjamie/vim-base16-lightline'
+
+" focused writing
 Plug 'junegunn/limelight.vim'
+
+" remember last editing position
 Plug 'farmergreg/vim-lastplace'
+
+" sensible vim settings
 Plug 'tpope/vim-sensible'
 
 call plug#end()
@@ -55,16 +70,10 @@ call plug#end()
     set noshowmode
 
 " Color scheme
-	try
-		colorscheme seoul256
-	catch
-	endtry
-    "" seoul256 (dark):
-    "   Range:   233 (darkest) ~ 239 (lightest)
-    "   Default: 237
-    let g:seoul256_background = 235
-    let g:seoul256_srgb = 1
-    set background=dark
+    if filereadable(expand("~/.vimrc_background"))
+        let base16colorspace=256
+        source ~/.vimrc_background
+    endif
 
 " Disable autocommenting on newline
 	autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
@@ -92,7 +101,7 @@ call plug#end()
 
     " Lightline
     let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'base16',
       \ }
 
 function! s:writing_mode()
