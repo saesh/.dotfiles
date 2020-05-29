@@ -20,3 +20,8 @@ end
 if type -q fzf_key_bindings
     fzf_key_bindings
 end
+
+# load local fish config
+if test -e ~/.config/fish/local.config.fish
+    source ~/.config/fish/local.config.fish
+end
