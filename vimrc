@@ -15,29 +15,19 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" zen mode
-Plug 'junegunn/goyo.vim'
-
-" multi cursor support
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim' " zen mode
+Plug 'junegunn/limelight.vim' " highlight paragraphs
 Plug 'terryma/vim-multiple-cursors'
-
-" show git changes in sidebar
 Plug 'airblade/vim-gitgutter'
 
-" base16 theme support
-Plug 'chriskempson/base16-vim'
+Plug 'itchyny/lightline.vim' " status bar
+Plug 'chriskempson/base16-vim' " base16 themes
+Plug 'daviesjamie/vim-base16-lightline' " base16 for statusbar
+Plug 'junegunn/vim-emoji'
 
-" status bar
-Plug 'itchyny/lightline.vim'
-Plug 'daviesjamie/vim-base16-lightline'
-
-" focused writing
-Plug 'junegunn/limelight.vim'
-
-" remember last editing position
 Plug 'farmergreg/vim-lastplace'
-
-" sensible vim settings
 Plug 'tpope/vim-sensible'
 
 call plug#end()
@@ -72,6 +62,10 @@ call plug#end()
     set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
     " display control characters
     " set list
+	" code folding
+	set foldmethod=indent
+    set foldlevel=99
+	nnoremap <Space><Space> za
 
 " Color scheme
     if filereadable(expand("~/.vimrc_background"))
@@ -96,12 +90,21 @@ call plug#end()
     vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Auto Commands
-    autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufWritePre * %s/\s\+$//e " remove trailing whitespace
     autocmd BufWritePre ~/.zshrc "source ~/.zshrc"
 
 " Plugins
+    " FZF
+    map <C-f> <Esc><Esc>:Files!<CR> " normal mode search files
+    inoremap <C-f> <Esc><Esc>:BLines!<CR> " insert mode search within file
+    map <C-g> <Esc><Esc>:BCommits!<CR> " show commits
+
     " Git Gutter
     let g:gitgutter_max_signs = 500  " default value
+    let g:gitgutter_sign_added = emoji#for('gem')
+    let g:gitgutter_sign_modified = emoji#for('large_blue_diamond')
+    let g:gitgutter_sign_removed = emoji#for('small_red_triangle_down')
+    let g:gitgutter_sign_modified_removed = emoji#for('large_orange_diamond')
 
     " Lightline
     let g:lightline = {
