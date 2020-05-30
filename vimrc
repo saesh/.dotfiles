@@ -66,6 +66,11 @@ call plug#end()
 	set foldmethod=indent
     set foldlevel=99
 	nnoremap <Space><Space> za
+    " undo, after quit even
+    silent !mkdir -p $HOME/.vim/undo
+	set undodir=$HOME/.vim/undo
+    set undofile
+    set undolevels=1000 undoreload=10000
 
 " Color scheme
     if filereadable(expand("~/.vimrc_background"))
