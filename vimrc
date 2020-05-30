@@ -21,6 +21,7 @@ Plug 'junegunn/goyo.vim' " zen mode
 Plug 'junegunn/limelight.vim' " highlight paragraphs
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
 
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'chriskempson/base16-vim' " base16 themes
@@ -115,6 +116,9 @@ call plug#end()
     let g:lightline = {
       \ 'colorscheme': 'base16',
       \ }
+
+    " vim-commentary
+    map <C-_> gcc " toggle commen, this is C-/ on linux
 
 function! s:writing_mode()
     setlocal formatoptions=1
