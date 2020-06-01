@@ -15,3 +15,8 @@ end
 if test -e ~/.config/fish/local.config.fish
     source ~/.config/fish/local.config.fish
 end
+
+# use bat for colored man pages
+if type -sq bat
+    set -x MANPAGER "fish -c 'col -bx | bat -l man -p'"
+end
