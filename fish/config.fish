@@ -20,3 +20,11 @@ end
 if type -sq bat
     set -x MANPAGER "fish -c 'col -bx | bat -l man -p'"
 end
+
+# abbreviations
+abbr v "$EDITOR"
+
+# functions
+function vf
+    command fzf | xargs -o $EDITOR
+end
