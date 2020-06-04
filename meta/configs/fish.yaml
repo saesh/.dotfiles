@@ -1,5 +1,6 @@
 - link:
     "~/.config/fish/functions/bwc.fish": fish/functions/bwc.fish
+    "~/.config/fish/functions/base16-shell-theme.fish": fish/functions/base16-shell-theme.fish
     "~/.config/fish/config.fish": fish/config.fish
     "~/.config/fish/functions/fisher.fish": fish/fisher/fisher.fish
     "~/.config/fish/fishfile": fish/fishfile
