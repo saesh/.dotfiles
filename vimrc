@@ -35,41 +35,42 @@ call plug#end()
 
 " Basic configuration
     let mapleader =" "
-	set ffs=unix,dos,mac
-	set number relativenumber
-	set wildmode=longest,list,full
-	set splitbelow splitright
+    set ffs=unix,dos,mac
+    set number relativenumber
+    set wildmode=longest,list,full
+    set splitbelow splitright
     set updatetime=100
-	" search
-	set hlsearch
-	set showmatch
+    " search
+    set hlsearch
+    set showmatch
     " bells and whistles
-	set noerrorbells
-	set novisualbell
-	set nobackup
-	set nowb
-	set noswapfile
-	" tabs / indent
-	set expandtab
-	set shiftwidth=4
-	set tabstop=4
-	set lbr
-	set tw=500
-	set si
-	set wrap
+    set noerrorbells
+    set novisualbell
+    set nobackup
+    set nowb
+    set noswapfile
+    " tabs / indent
+    set expandtab
+    set shiftwidth=4
+    set softtabstop=4
+    set tabstop=4
+    set lbr
+    set tw=500
+    set si
+    set wrap
     " status line
     set noshowmode
     " define control characters
     set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
     " display control characters
     " set list
-	" code folding
-	set foldmethod=indent
+    " code folding
+    set foldmethod=indent
     set foldlevel=99
-	nnoremap <Space><Space> za
+    nnoremap <Space><Space> za
     " undo, after quit even
     silent !mkdir -p $HOME/.vim/undo
-	set undodir=$HOME/.vim/undo
+    set undodir=$HOME/.vim/undo
     set undofile
     set undolevels=1000 undoreload=10000
 
@@ -80,12 +81,12 @@ call plug#end()
     endif
 
 " Disable autocommenting on newline
-	autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+    autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " Shortcuts
-	map <leader>f :Goyo \| set linebreak<CR>
-	" navigation in split view
-	map <leader>s :w!<CR>
+    map <leader>f :Goyo \| set linebreak<CR>
+    " navigation in split view
+    map <leader>s :w!<CR>
 
     " move lines in normal, insert and visual mode
     nnoremap <C-j> :m .+1<CR>==
