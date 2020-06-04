@@ -56,8 +56,8 @@ call plug#end()
     set tabstop=4
     set lbr
     set tw=500
-    set si
     set wrap
+    set cindent cinkeys-=0#
     " status line
     set noshowmode
     " define control characters
