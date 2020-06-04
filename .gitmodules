@@ -21,3 +21,6 @@
 [submodule "terminal/colors/base16-shell"]
 	path = terminal/colors/base16-shell
 	url = https://github.com/chriskempson/base16-shell
+[submodule "terminal/colors/base16-fzf"]
+	path = terminal/colors/base16-fzf
+	url = https://github.com/fnune/base16-fzf
