@@ -76,6 +76,7 @@ call plug#end()
     set undolevels=1000 undoreload=10000
 
 " Color scheme
+    set background=dark
     if filereadable(expand("~/.vimrc_background"))
         let base16colorspace=256
         source ~/.vimrc_background
