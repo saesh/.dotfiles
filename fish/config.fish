@@ -31,3 +31,7 @@ abbr vd "$EDITOR ~/did.txt"
 function vf
     command fzf | xargs -o $EDITOR
 end
+
+# set PATH
+# used by epr (terminal epub reader)
+set PATH ~/.local/bin $PATH
