@@ -26,6 +26,7 @@ end
 # abbreviations
 abbr v "$EDITOR"
 abbr vd "$EDITOR ~/did.txt"
+abbr vw "vim -c VimwikiIndex"
 
 # functions
 function vf
