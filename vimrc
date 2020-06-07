@@ -22,6 +22,7 @@ Plug 'junegunn/limelight.vim' " highlight paragraphs
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
+Plug 'vimwiki/vimwiki'
 
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'chriskempson/base16-vim' " base16 themes
