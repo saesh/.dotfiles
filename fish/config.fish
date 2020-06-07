@@ -1,5 +1,7 @@
 set -Ux EDITOR vim
 
+# enhancd settings
+set -Ux ENHANCD_HOOK_AFTER_CD "la"
 # Base16 Shell
 if status --is-interactive
     set BASE16_SHELL "$HOME/.config/base16-shell/"
