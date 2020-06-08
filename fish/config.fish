@@ -36,3 +36,7 @@ end
 # set PATH
 # used by epr (terminal epub reader)
 set PATH ~/.local/bin $PATH
+# texlive
+set PATH /usr/local/texlive/2020/bin/x86_64-linux $PATH
+set MANPATH /usr/local/texlive/2020/texmf-dist/doc/man $MANPATH
+set INFOPATH /usr/local/texlive/2020/texmf-dist/doc/info $INFOPATH
