@@ -126,7 +126,7 @@ call plug#end()
 function! s:writing_mode()
     setlocal formatoptions=1
     setlocal noexpandtab
-    setlocal spell spelllang=en_us
+    setlocal spell spelllang=en_us,de
     setlocal spell spellfile=$HOME/.vim/spellfile.utf-8.add
     set formatprg=par
     setlocal textwidth=100
