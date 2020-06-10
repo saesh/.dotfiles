@@ -27,6 +27,12 @@ end
 abbr v "$EDITOR"
 abbr vd "$EDITOR ~/did.txt"
 abbr vw "vim -c VimwikiIndex"
+abbr ytd "youtube-dl"
+
+# aliases
+if type -q 'youtube-dl'
+    alias youtube-dl='/usr/bin/python3 /usr/local/bin/youtube-dl'
+end
 
 # functions
 function vf
