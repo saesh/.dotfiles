@@ -1,0 +1,5 @@
+- link:
+    ~/.fzf: fzf/fzf
+
+- shell:
+    - [~/.fzf/install --no-bash --no-zsh --key-bindings --64 --no-completion --update-rc]
