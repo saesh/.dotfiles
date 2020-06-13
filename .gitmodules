@@ -24,3 +24,6 @@
 [submodule "terminal/colors/base16-fzf"]
 	path = terminal/colors/base16-fzf
 	url = https://github.com/fnune/base16-fzf
+[submodule "terminal/colors/base16-fish"]
+	path = terminal/colors/base16-fish
+	url = https://github.com/saesh/base16-fish.git
