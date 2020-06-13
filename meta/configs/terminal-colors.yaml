@@ -1,3 +1,4 @@
 - link:
     ~/.config/base16-shell: terminal/colors/base16-shell
     ~/.config/base16-fzf: terminal/colors/base16-fzf/fish
+    ~/.config/base16-fish: terminal/colors/base16-fish/functions

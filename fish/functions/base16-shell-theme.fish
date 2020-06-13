@@ -11,7 +11,7 @@ function base16-shell-theme --argument-names 'theme' -d 'set shell/fish/fzf base
 
     # scripts to set various themes
     set -l base16_shell base16-$theme
-    set -l base16_fish fish-base16-$theme
+    set -l base16_fish ~/.config/base16-fish/base16-$theme.fish
     set -l base16_fzf ~/.config/base16-fzf/base16-$theme.fish
 
     # attempt to execute base16-shell theme script
@@ -20,10 +20,10 @@ function base16-shell-theme --argument-names 'theme' -d 'set shell/fish/fzf base
         $base16_shell
     end
 
-    # attempt to set fish-base16-themes theme script
-    if type -q $base16_fish
-        echo "setting fish-base16-themes theme"
-        $base16_fish
+    # attempt to set base16-fish theme script
+    if test -e $base16_fish
+        echo "setting base16-fish theme"
+        source $base16_fish
     end
 
     # attempt to source base16-fzf theme script
