@@ -44,5 +44,8 @@ end
 set PATH ~/.local/bin $PATH
 # texlive
 set PATH /usr/local/texlive/2020/bin/x86_64-linux $PATH
-set MANPATH /usr/local/texlive/2020/texmf-dist/doc/man $MANPATH
 set INFOPATH /usr/local/texlive/2020/texmf-dist/doc/info $INFOPATH
+
+# MANPATH
+#set -gx MANPATH (manpath | string split :)
+#set -gx MANPATH /usr/local/texlive/2020/texmf-dist/doc/man $MANPATH ":"
