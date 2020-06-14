@@ -97,6 +97,7 @@ call plug#end()
     inoremap <C-k> <Esc>:m .-2<CR>==gi
     vnoremap <C-j> :m '>+1<CR>gv=gv
     vnoremap <C-k> :m '<-2<CR>gv=gv
+    iab <expr> dts strftime("%FT%T%z") " expand to ISO8601 datetime string
 
 " Auto Commands
     autocmd BufWritePre * %s/\s\+$//e " remove trailing whitespace
