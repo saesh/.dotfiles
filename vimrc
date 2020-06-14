@@ -133,6 +133,11 @@ call plug#end()
     " vim-commentary
     map <C-_> gcc " toggle commen, this is C-/ on linux
 
+    " vimwiki
+    let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}] " use markdown and md extension
+    let g:vimwiki_global_ext = 0 " use vimwiki only for vimwiki markdown files
+    let g:vimwiki_markdown_link_ext = 1 " add markdown extension to generated links
+
 function! s:writing_mode()
     setlocal formatoptions=1
     setlocal noexpandtab
