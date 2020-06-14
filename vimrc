@@ -105,9 +105,18 @@ call plug#end()
 
 " Plugins
     " FZF
-    map <C-f> <Esc><Esc>:Files!<CR> " normal mode search files
-    inoremap <C-f> <Esc><Esc>:BLines!<CR> " insert mode search within file
-    map <C-g> <Esc><Esc>:BCommits!<CR> " show commits
+    " Control-F (normal mode): searhc for a file
+    map <C-f> <Esc><Esc>:Files!<CR>
+    " Control-F (insert mode): search inside open file
+    inoremap <C-f> <Esc><Esc>:BLines!<CR>
+    " Control-G: show commits
+    map <C-g> <Esc><Esc>:BCommits!<CR>
+    " Alt-F: to search within files
+    execute "set <M-f>=\ef"
+    nnoremap <M-f> <Esc><Esc>:Ag<CR>
+    " Override Files command to use bat preview
+    command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
     " Git Gutter
     let g:gitgutter_max_signs = 500  " default value
