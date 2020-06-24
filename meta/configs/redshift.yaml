@@ -1,0 +1,3 @@
+- link:
+    ~/.config/redshift.conf: redshift/redshift.conf
+    ~/.config/autostart/redshift.desktop: redshift/redshift.desktop
