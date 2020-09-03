@@ -34,6 +34,11 @@ if type -q 'youtube-dl'
     alias youtube-dl='/usr/bin/python3 /usr/local/bin/youtube-dl'
 end
 
+# exa, ls alternative
+if type -sq exa
+    alias ls='exa'
+end
+
 # functions
 function vf
     command fzf | xargs -o $EDITOR
