@@ -54,3 +54,5 @@ set INFOPATH /usr/local/texlive/2020/texmf-dist/doc/info $INFOPATH
 # MANPATH
 #set -gx MANPATH (manpath | string split :)
 #set -gx MANPATH /usr/local/texlive/2020/texmf-dist/doc/man $MANPATH ":"
+
+set PATH /usr/local/go/bin $PATH
