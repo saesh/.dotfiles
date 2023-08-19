@@ -120,10 +120,10 @@ call plug#end()
 
     " Git Gutter
     let g:gitgutter_max_signs = 500  " default value
-    let g:gitgutter_sign_added = emoji#for('gem')
-    let g:gitgutter_sign_modified = emoji#for('large_blue_diamond')
-    let g:gitgutter_sign_removed = emoji#for('small_red_triangle_down')
-    let g:gitgutter_sign_modified_removed = emoji#for('large_orange_diamond')
+    " let g:gitgutter_sign_added = emoji#for('gem')
+    " let g:gitgutter_sign_modified = emoji#for('large_blue_diamond')
+    " let g:gitgutter_sign_removed = emoji#for('small_red_triangle_down')
+    " let g:gitgutter_sign_modified_removed = emoji#for('large_orange_diamond')
 
     " Lightline
     let g:lightline = {

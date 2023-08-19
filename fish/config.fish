@@ -1,8 +1,11 @@
+set fish_greeting
+
 set -Ux EDITOR vim
 
 # enhancd settings
 set -Ux ENHANCD_HOOK_AFTER_CD "la"
 # Base16 Shell
+
 if status --is-interactive
     set BASE16_SHELL "$HOME/.config/base16-shell/"
     source "$BASE16_SHELL/profile_helper.fish"
@@ -10,7 +13,7 @@ end
 
 # FZF key bindings
 if type -q fzf_key_bindings
-    fzf_key_bindings
+   fzf_key_bindings
 end
 
 # load local fish config
@@ -40,19 +43,21 @@ if type -sq exa
 end
 
 # functions
-function vf
-    command fzf | xargs -o $EDITOR
-end
+#function vf
+#    command fzf | xargs -o $EDITOR
+#end
 
 # set PATH
 # used by epr (terminal epub reader)
 set PATH ~/.local/bin $PATH
 # texlive
-set PATH /usr/local/texlive/2020/bin/x86_64-linux $PATH
-set INFOPATH /usr/local/texlive/2020/texmf-dist/doc/info $INFOPATH
+#set PATH /usr/local/texlive/2020/bin/x86_64-linux $PATH
+#set INFOPATH /usr/local/texlive/2020/texmf-dist/doc/info $INFOPATH
 
 # MANPATH
 #set -gx MANPATH (manpath | string split :)
 #set -gx MANPATH /usr/local/texlive/2020/texmf-dist/doc/man $MANPATH ":"
 
 set PATH /usr/local/go/bin $PATH
+set PATH $HOME/go/bin $PATH
+set PATH /usr/local/protobuf/bin $PATH
